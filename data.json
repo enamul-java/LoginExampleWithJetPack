@@ -1,0 +1,335 @@
+{
+	"schema": {
+		"type": "struct",
+		"fields": [
+			{
+				"type": "struct",
+				"fields": [
+					{
+						"type": "int32",
+						"optional": false,
+						"field": "EMPLOYEE_ID"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "FIRST_NAME"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "LAST_NAME"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "EMAIL"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "PHONE_NUMBER"
+					},
+					{
+						"type": "int64",
+						"optional": false,
+						"name": "io.debezium.time.Timestamp",
+						"version": 1,
+						"field": "HIRE_DATE"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "JOB_ID"
+					},
+					{
+						"type": "bytes",
+						"optional": true,
+						"name": "org.apache.kafka.connect.data.Decimal",
+						"version": 1,
+						"parameters": {
+							"scale": "2",
+							"connect.decimal.precision": "8"
+						},
+						"field": "SALARY"
+					},
+					{
+						"type": "bytes",
+						"optional": true,
+						"name": "org.apache.kafka.connect.data.Decimal",
+						"version": 1,
+						"parameters": {
+							"scale": "2",
+							"connect.decimal.precision": "2"
+						},
+						"field": "COMMISSION_PCT"
+					},
+					{
+						"type": "int32",
+						"optional": true,
+						"field": "MANAGER_ID"
+					},
+					{
+						"type": "int16",
+						"optional": true,
+						"field": "DEPARTMENT_ID"
+					}
+				],
+				"optional": true,
+				"name": "oracle_topic.ELK_USER.EMPLOYEES.Value",
+				"field": "before"
+			},
+			{
+				"type": "struct",
+				"fields": [
+					{
+						"type": "int32",
+						"optional": false,
+						"field": "EMPLOYEE_ID"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "FIRST_NAME"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "LAST_NAME"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "EMAIL"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "PHONE_NUMBER"
+					},
+					{
+						"type": "int64",
+						"optional": false,
+						"name": "io.debezium.time.Timestamp",
+						"version": 1,
+						"field": "HIRE_DATE"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "JOB_ID"
+					},
+					{
+						"type": "bytes",
+						"optional": true,
+						"name": "org.apache.kafka.connect.data.Decimal",
+						"version": 1,
+						"parameters": {
+							"scale": "2",
+							"connect.decimal.precision": "8"
+						},
+						"field": "SALARY"
+					},
+					{
+						"type": "bytes",
+						"optional": true,
+						"name": "org.apache.kafka.connect.data.Decimal",
+						"version": 1,
+						"parameters": {
+							"scale": "2",
+							"connect.decimal.precision": "2"
+						},
+						"field": "COMMISSION_PCT"
+					},
+					{
+						"type": "int32",
+						"optional": true,
+						"field": "MANAGER_ID"
+					},
+					{
+						"type": "int16",
+						"optional": true,
+						"field": "DEPARTMENT_ID"
+					}
+				],
+				"optional": true,
+				"name": "oracle_topic.ELK_USER.EMPLOYEES.Value",
+				"field": "after"
+			},
+			{
+				"type": "struct",
+				"fields": [
+					{
+						"type": "string",
+						"optional": false,
+						"field": "version"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "connector"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "name"
+					},
+					{
+						"type": "int64",
+						"optional": false,
+						"field": "ts_ms"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"name": "io.debezium.data.Enum",
+						"version": 1,
+						"parameters": {
+							"allowed": "true,last,false,incremental"
+						},
+						"default": "false",
+						"field": "snapshot"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "db"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "sequence"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "schema"
+					},
+					{
+						"type": "string",
+						"optional": false,
+						"field": "table"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "txId"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "scn"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "commit_scn"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "lcr_position"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "rs_id"
+					},
+					{
+						"type": "int32",
+						"optional": true,
+						"field": "ssn"
+					},
+					{
+						"type": "int32",
+						"optional": true,
+						"field": "redo_thread"
+					},
+					{
+						"type": "string",
+						"optional": true,
+						"field": "user_name"
+					}
+				],
+				"optional": false,
+				"name": "io.debezium.connector.oracle.Source",
+				"field": "source"
+			},
+			{
+				"type": "string",
+				"optional": false,
+				"field": "op"
+			},
+			{
+				"type": "int64",
+				"optional": true,
+				"field": "ts_ms"
+			},
+			{
+				"type": "struct",
+				"fields": [
+					{
+						"type": "string",
+						"optional": false,
+						"field": "id"
+					},
+					{
+						"type": "int64",
+						"optional": false,
+						"field": "total_order"
+					},
+					{
+						"type": "int64",
+						"optional": false,
+						"field": "data_collection_order"
+					}
+				],
+				"optional": true,
+				"name": "event.block",
+				"version": 1,
+				"field": "transaction"
+			}
+		],
+		"optional": false,
+		"name": "oracle_topic.ELK_USER.EMPLOYEES.Envelope",
+		"version": 1
+	},
+	"payload": {
+		"before": null,
+		"after": {
+			"EMPLOYEE_ID": 197,
+			"FIRST_NAME": "Kevin11",
+			"LAST_NAME": "Feeney",
+			"EMAIL": "KFEENEY",
+			"PHONE_NUMBER": "650.507.9822",
+			"HIRE_DATE": 1148342400000,
+			"JOB_ID": "SH_CLERK",
+			"SALARY": "BJPg",
+			"COMMISSION_PCT": null,
+			"MANAGER_ID": 124,
+			"DEPARTMENT_ID": 50
+		},
+		"source": {
+			"version": "2.1.1.Final",
+			"connector": "oracle",
+			"name": "oracle_topic",
+			"ts_ms": 1675767650000,
+			"snapshot": "last",
+			"db": "XEPDB1",
+			"sequence": null,
+			"schema": "ELK_USER",
+			"table": "EMPLOYEES",
+			"txId": null,
+			"scn": "15694243",
+			"commit_scn": null,
+			"lcr_position": null,
+			"rs_id": null,
+			"ssn": 0,
+			"redo_thread": null,
+			"user_name": null
+		},
+		"op": "r",
+		"ts_ms": 1675746099735,
+		"transaction": null
+	}
+}
